@@ -8,7 +8,7 @@ const DB_URI = process.env.MONGO_URI;
 export const connect_db = async () =>{
     try {
         const c = await mongoose.connect(DB_URI);
-        console.log(`Mongo DB Connected: ${c.connection.host}`);
+        console.log(`DB connected: ${c.connection.host}`);
         
     } catch (error) {
 
