@@ -1,6 +1,7 @@
 import User from "../models/user.model.js";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import { redis } from "../lib/redis.js";
 dotenv.config();
 
 const generateToken = (userId) => {
@@ -53,9 +54,17 @@ export const signup = async (req, res) => {
     await storeRefreshToken(user._id, refreshToken);
     setCookies(res, accessToken, refreshToken);
 
-    res.status(201).json({ user, message: "User created successfully" });
+    res.status(201).json({
+      user: {
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      },
+      message: "User created successfully",
+    });
 
-    res.send("signup route called");
+    // res.send("signup route called");
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
