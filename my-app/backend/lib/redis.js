@@ -1,12 +1,8 @@
-import { createClient } from "redis"
+import Redis from "ioredis";
 import dotenv from "dotenv";
 dotenv.config();
-const client = createClient({
-  url: process.env.REDIS_URL
-});
+// Redis is a type of key-value store
 
-client.on("error", function(err) {
-  throw err;
-});
-await client.connect()
-await client.set('foo','bar');
+export const redis = new Redis(process.env.REDIS_URL);
+//await client.connect()
+await redis.set("foo", "bar");
