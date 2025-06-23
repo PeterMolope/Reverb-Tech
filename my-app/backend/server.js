@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 
 //routes
 import authRoutes from "./routes/auth.route.js";
+import productRoutes from "./routes/product.route.js";
 import { connect_db } from "./lib/db.js";
 
 dotenv.config();
@@ -12,7 +13,10 @@ const _PORT_ = process.env.PORT;
 
 app.use(express.json());
 app.use(cookieParser());
+
 app.use("/api/auth", authRoutes);
+app.use("/api/product", productRoutes);
+
 app.listen(_PORT_, () => {
   console.log("Server is now running on port no. " + _PORT_ + "!");
   connect_db();

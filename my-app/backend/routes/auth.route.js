@@ -6,6 +6,7 @@ import {
   refreshToken,
   getUserProfile,
 } from "../controllers/auth.controller.js";
+import { protectRoute } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
@@ -17,6 +18,6 @@ router.post("/logout", logout);
 
 router.post("/refresh-token", refreshToken);
 
-router.get("/profile", getUserProfile);
+router.get("/profile", protectRoute, getUserProfile);
 
 export default router;
