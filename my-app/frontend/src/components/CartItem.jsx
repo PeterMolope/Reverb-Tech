@@ -1,4 +1,4 @@
-import { Minus, Plus, Trash } from "lucide-react";
+import { Minus, Plus, Trash2 } from "lucide-react";
 import { useCartStore } from "../stores/useCartStore";
 
 const CartItem = ({ item }) => {
@@ -50,7 +50,7 @@ const CartItem = ({ item }) => {
 							 hover:text-red-300 hover:underline"
               onClick={() => removeFromCart(item._id)}
             >
-              <Trash />
+              <Trash2 />
             </button>
           </div>
         </div>
