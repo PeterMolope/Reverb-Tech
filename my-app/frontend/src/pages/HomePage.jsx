@@ -20,7 +20,7 @@ const HomePage = () => {
           Shop by Category
         </h1>
         <p className="text-center text-xl text-gray-300 mb-12">
-          Experience Next-Level Gaming Performance with Components
+          Experience Next-Level Gaming Performance with our Components
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
