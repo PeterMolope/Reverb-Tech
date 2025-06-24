@@ -17,6 +17,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-lg z-40 transition-all duration-300 border-b border-blue-800">
+      <title>Reverb Tech</title>
       <div className="container mx-auto px-4 py-3">
         <div className="flex flex-wrap justify-between items-center">
           <Link
@@ -38,18 +39,18 @@ const Navbar = () => {
             {user && (
               <Link
                 to={"/cart"}
-                className="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 
-									rounded-md flex items-center transition duration-300 ease-in-out"
+                className="relative bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 
+                        rounded-md flex items-center transition duration-300 ease-in-out"
               >
                 <ShoppingCart
                   className="inline-block mr-1 group-hover:text-blue-400"
                   size={20}
                 />
                 <span className="hidden sm:inline">Cart</span>
-                {cart.length > 0 && (
+                {user && (
                   <span
-                    className="absolute -top-2 -left-2 bg-blue-500 text-white rounded-full px-2 py-0.5 
-									text-xs group-hover:bg-blue-400 transition duration-300 ease-in-out"
+                    className="absolute -top-2 left-15 bg-blue-500 text-white rounded-full px-2 py-0.5 
+                  text-xs group-hover:bg-blue-400 transition duration-300 ease-in-out"
                   >
                     {cart.length}
                   </span>

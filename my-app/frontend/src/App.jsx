@@ -24,6 +24,7 @@ function App() {
     //   </div>
 
     //   <div className="relative z-50 pt-20">
+
     <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0">
