@@ -1,21 +1,16 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
 import Navbar from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
+import { useUserStore } from "./stores/useUserStore";
 
 function App() {
-  const { user, checkAuth, checkingAuth } = useUserStore();
+  const { user, checkAuth, checkingAuth } = useUserStoreStore();
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
-
-  useEffect(() => {
-    if (!user) return;
-
-    getCartItems();
-  }, [getCartItems, user]);
 
   if (checkingAuth) return <LoadingSpinner />;
   return (
