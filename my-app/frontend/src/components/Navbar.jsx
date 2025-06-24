@@ -38,8 +38,8 @@ const Navbar = () => {
             {user && (
               <Link
                 to={"/cart"}
-                className="relative group text-gray-300 hover:text-blue-400 transition duration-300 
-							ease-in-out"
+                className="bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 
+									rounded-md flex items-center transition duration-300 ease-in-out"
               >
                 <ShoppingCart
                   className="inline-block mr-1 group-hover:text-blue-400"
@@ -58,8 +58,8 @@ const Navbar = () => {
             )}
             {isAdmin && (
               <Link
-                className="bg-blue-700 hover:bg-blue-600 text-white px-3 py-1 rounded-md font-medium
-								 transition duration-300 ease-in-out flex items-center"
+                className="bg-blue-700 hover:bg-blue-600 text-white py-2 px-4 
+									rounded-md flex items-center transition duration-300 ease-in-out"
                 to={"/secret-dashboard"}
               >
                 <Lock className="inline-block mr-1" size={18} />
