@@ -5,9 +5,11 @@ import LoginPage from "./pages/LoginPage";
 import Navbar from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
 import { useUserStore } from "./stores/useUserStore";
+import LoadingSpinner from "./components/LoadingSpinner";
+import { useEffect } from "react";
 
 function App() {
-  const { user, checkAuth, checkingAuth } = useUserStoreStore();
+  const { user, checkAuth, checkingAuth } = useUserStore();
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
