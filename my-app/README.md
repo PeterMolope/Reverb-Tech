@@ -4,6 +4,9 @@
 The Reverb Tech E-commerce Application is a full-stack web platform designed to facilitate the sale of PC components for custom computer builds. It aims to provide a seamless and intuitive shopping experience for users looking to purchase individual parts, alongside robust administrative tools for managing products and user accounts.
 ## Hosted On Render
 https://reverb-tech.onrender.com
+
+## Github Repository
+https://github.com/PeterMolope/Reverb-Tech/tree/main/my-app
 ---
 
 
