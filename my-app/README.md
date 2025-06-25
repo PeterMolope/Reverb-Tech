@@ -103,3 +103,27 @@ npm run build
 
   ## Start the app
 npm run start
+
+---
+
+## Environment Variables
+
+ACCESS_TOKEN_SECRET=mMTQxMTJhNzM0
+
+CLIENT_URL=http://localhost:5173
+
+CLOUDINARY_API_KEY=814887151375324
+
+CLOUDINARY_API_SECRET=N5EIA-Ocz4Vti9NtXZrQQj1IHQo
+
+CLOUDINARY_CLOUD_NAME=duzlm4vtq
+
+MONGO_URI="mongodb+srv://ptrmolope17:Y18sxrZOmmiipfQ7@cluster0.v7z5wpm.mongodb.net/ReverbDB?retryWrites=true&w=majority&appName=Cluster0"
+
+PORT=8000
+
+REDIS_URL=rediss://default:ASiFAAIjcDE1YjFmMTQxMTJhNzM0YmMzOWE3MTU0YWI1ZDZhYjUyOXAxMA@legible-quail-10373.upstash.io:6379
+
+REFRESH_TOKEN_SECRET=MTU0YWI1ZDZhYjUyOXA
+
+STRIPE_SECRET_KEY=sk_test_51Rd9e4BGGvXHfD6r3DcWhRaXkGzk53CzMgntfOZ2RmQyGmIi2qjLvLyCNoQkNRcr5VsPrBGqoFfEDjyyG5sQCloF00L2yOSMqZ
