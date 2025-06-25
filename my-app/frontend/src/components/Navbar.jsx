@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="flex flex-wrap justify-between items-center">
           <Link
             to="/"
-            className="text-cyan-400 text-3xl font-extrabold cursor-pointer transition-transform duration-300 hover:scale-105"
+            className="text-white-400 text-3xl font-extrabold cursor-pointer transition-transform duration-300 hover:scale-105"
           >
             Reverb Tech
           </Link>

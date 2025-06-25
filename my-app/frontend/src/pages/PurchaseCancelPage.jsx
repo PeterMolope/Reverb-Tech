@@ -1,4 +1,4 @@
-import { XCircle, ArrowLeft } from "lucide-react";
+import { XCircle, ArrowLeft, Frown } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const PurchaseCancelPage = () => {
       >
         <div className="p-6 sm:p-8">
           <div className="flex justify-center">
-            <XCircle className="text-red-500 w-16 h-16 mb-4" />
+            <Frown className="text-red-500 w-16 h-16 mb-4" />
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold text-center text-red-500 mb-2">
             Purchase Cancelled
