@@ -91,3 +91,9 @@ The Reverb Tech E-commerce Application is a full-stack web platform designed to 
 
 ### **Deployment (Planned)**
 - Render (full-stack)
+
+  ## Run this app locally
+npm run build
+
+  ## Start the app
+npm run start
