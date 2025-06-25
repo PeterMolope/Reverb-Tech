@@ -5,6 +5,7 @@ import {
   LogOut,
   Lock,
   Home,
+  LockKeyhole,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useUserStore } from "../stores/useUserStore";
@@ -47,7 +48,7 @@ const Navbar = () => {
                   size={20}
                 />
                 <span className="hidden sm:inline">Cart</span>
-                {user && (
+                {cart.length > 0 && (
                   <span
                     className="absolute -top-2 left-15 bg-blue-500 text-white rounded-full px-2 py-0.5 
                   text-xs group-hover:bg-blue-400 transition duration-300 ease-in-out"
@@ -63,8 +64,8 @@ const Navbar = () => {
 									rounded-md flex items-center transition duration-300 ease-in-out"
                 to={"/secret-dashboard"}
               >
-                <Lock className="inline-block mr-1" size={18} />
-                <span className="hidden sm:inline">Admin Dashboard</span>
+                <LockKeyhole className="inline-block mr-1" size={18} />
+                <span className="hidden sm:inline">Admin Panel</span>
               </Link>
             )}
 
