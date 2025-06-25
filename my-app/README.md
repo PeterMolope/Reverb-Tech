@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Reverb Tech E-commerce Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Description
+The Reverb Tech E-commerce Application is a full-stack web platform designed to facilitate the sale of PC components for custom computer builds. It aims to provide a seamless and intuitive shopping experience for users looking to purchase individual parts, alongside robust administrative tools for managing products and user accounts.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+### **Frontend (React.js)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Responsive User Interface (UI)**  
+  Built with Tailwind CSS, the application offers a fully responsive design, ensuring optimal viewing and usability across various devices, including desktops, tablets, and mobile phones.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Dynamic Product Catalog**  
+  - Displays a comprehensive catalog of PC components, complete with detailed descriptions, pricing, and imagery.  
+  - Features a dedicated section for "Featured Components" to highlight popular or new arrivals when a user is not logged in.  
+  - Allows users to browse products by category, providing a streamlined shopping experience for specific component types (e.g., CPUs, Graphics Cards, Memory).
 
-### `npm test`
+- **Interactive Shopping Cart**  
+  Users can easily add, remove, and update quantities of products in their shopping cart before proceeding to checkout.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Simulated User Authentication**  
+  Provides a frontend UI for user login. In a production environment, this would integrate with a JWT-based authentication system for secure access.
 
-### `npm run build`
+- **Simulated Checkout Process**  
+  Features a checkout page for entering shipping and payment details, simulating integration with a payment gateway like Stripe.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Simulated Admin Panel**  
+  Offers a dedicated UI for administrators to perform product management (add, edit, delete components) and user management (delete simulated users), laying the groundwork for backend-driven functionality.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Enhanced User Experience**  
+  - Incorporates animations using Framer Motion for a more dynamic and engaging interface.  
+  - Includes Toast notifications (via React Hot Toast) for user feedback.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Client-Side Routing**  
+  Utilizes React Router DOM for efficient navigation between different sections of the application without full page reloads.
 
-### `npm run eject`
+- **Global State Management**  
+  Employs Zustand for streamlined and efficient management of application-wide state (e.g., cart, user, products).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Iconography**  
+  Integrates Lucide React for modern and consistent icons throughout the application.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Backend (Planned - Node.js with MongoDB)**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **User Authentication (JWT)**  
+  Designed to implement secure user login and registration using JSON Web Tokens (JWT) for authorization.
 
-## Learn More
+- **Product Management API**  
+  Provides RESTful APIs for creating, reading, updating, and deleting product information, accessible by administrators.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **User Management API**  
+  Offers functionalities for managing user accounts, including basic CRUD operations for administrators.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Shopping Cart Logic**  
+  Manages server-side cart persistence and integrity.
 
-### Code Splitting
+- **Stripe Payment Gateway Integration**  
+  Handles server-side processing of payments securely, interacting with the Stripe API to create charges and manage transactions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Database Management**  
+  Utilizes MongoDB as the NoSQL database for storing product details, user information, orders, and other application data.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Technologies Used
 
-### Making a Progressive Web App
+### **Frontend**
+- React.js
+- Vite
+- Tailwind CSS
+- Zustand
+- React Router DOM
+- Framer Motion
+- React Hot Toast
+- Lucide React
+- Axios (for API calls)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### **Backend (Planned)**
+- Node.js
+- Express.js
+- MongoDB (via Mongoose)
+- JSON Web Tokens (JWT)
 
-### Advanced Configuration
+### **Payment Gateway (Planned)**
+- Stripe.js (client-side)
+- Stripe API (server-side)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### **Deployment (Planned)**
+- Render (full-stack)
