@@ -89,7 +89,7 @@ const AnalyticsTab = () => {
               yAxisId="left"
               type="monotone"
               dataKey="sales"
-              stroke="#10B981"
+              stroke="#FF5733"
               activeDot={{ r: 8 }}
               name="Sales"
             />
@@ -97,7 +97,7 @@ const AnalyticsTab = () => {
               yAxisId="right"
               type="monotone"
               dataKey="revenue"
-              stroke="#3B82F6"
+              stroke="#1bd124"
               activeDot={{ r: 8 }}
               name="Revenue"
             />

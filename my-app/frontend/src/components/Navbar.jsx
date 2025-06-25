@@ -62,7 +62,7 @@ const Navbar = () => {
               <Link
                 className="bg-blue-700 hover:bg-blue-600 text-white py-2 px-4 
 									rounded-md flex items-center transition duration-300 ease-in-out"
-                to={"/secret-dashboard"}
+                to={"/admin-dashboard"}
               >
                 <LockKeyhole className="inline-block mr-1" size={18} />
                 <span className="hidden sm:inline">Admin Panel</span>
