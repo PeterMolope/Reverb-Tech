@@ -46,6 +46,29 @@ export const useUserStore = create((set, get) => ({
       );
     }
   },
+  fetchAllUsers: async () => {
+    set({ loading: true });
+    try {
+      const response = await axios.get("/auth");
+      set({ products: response.data.products, loading: false });
+    } catch (error) {
+      set({ error: "Failed to fetch users", loading: false });
+      toast.error(error.response.data.error || "Failed to fetch users");
+    }
+  },
+  deleteUser: async (UID) => {
+    set({ loading: true });
+    try {
+      await axios.delete(`/users/${UID}`);
+      set((prevUsers) => ({
+        users: prevUsers.users.filter((user) => user._id !== UID),
+        loading: false,
+      }));
+    } catch (error) {
+      set({ loading: false });
+      toast.error(error.response.data.error || "Failed to delete user");
+    }
+  },
 
   checkAuth: async () => {
     set({ checkingAuth: true });
