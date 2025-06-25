@@ -3,9 +3,11 @@ import axios from "../lib/axios";
 import { toast } from "react-hot-toast";
 
 export const useUserStore = create((set, get) => ({
+  users: [],
   user: null,
   loading: false,
   checkingAuth: true,
+  setUsers: (users) => set({ users }),
 
   signup: async ({ name, email, password, confirmPassword }) => {
     set({ loading: true });
@@ -47,10 +49,11 @@ export const useUserStore = create((set, get) => ({
     }
   },
   fetchAllUsers: async () => {
+    console.log("test fetch =>");
     set({ loading: true });
     try {
-      const response = await axios.get("/auth");
-      set({ products: response.data.products, loading: false });
+      const response = await axios.get("/users");
+      set({ users: response.data.users, loading: false });
     } catch (error) {
       set({ error: "Failed to fetch users", loading: false });
       toast.error(error.response.data.error || "Failed to fetch users");
